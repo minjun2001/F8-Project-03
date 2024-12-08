@@ -26,9 +26,32 @@ a {
     margin: 0 auto;
 }
 
+.btn {
+    --height: 60px;
+
+    display: inline-block;
+    min-width: 205px;
+    color: #FFFFFF;
+    background: #2E80CE;
+    height: 60px;
+    padding: 0 20px;
+    line-height: var(--height);
+    border-radius: 999px;
+    border: 1px solid #2E80CE;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 /* header */
 .header {
     min-height: 100vh;
+    padding-top: 30px;
     background: var(--header-bg);
 }
 
@@ -76,7 +99,48 @@ a {
 .logo__brand--small {
     font-size: 1.2em;
     font-weight: 300;
+}
 
+/* header-top */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.action__login,
+.navbar__link {
+    padding: 4px 21px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #C9D2DA;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: #FFFFFF;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: -8px;
+    top: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.action__signup {
+    --height: 44px;
+    min-width: 104px;
 }
 
 
